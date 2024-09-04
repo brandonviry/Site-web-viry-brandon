@@ -3,7 +3,7 @@ import { getDatabaseDataGalerie } from '@/utils/notionUtils';
 
 export async function GET() {
   try {
-    const databaseId = process.env.NOTION_DATABASE_ID_GALERIE;
+    const databaseId = process.env.NOTION_DATABASE_ID_PROJET;
     if (!databaseId) {
       throw new Error('NOTION_DATABASE_ID_GALERIE is not defined in environment variables.');
     }
