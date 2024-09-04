@@ -1,0 +1,87 @@
+{
+  "default": {
+    "title": "Mon Site Web",
+    "description": "Bienvenue sur mon site web personnel",
+    "openGraph": {
+      "title": "Mon Site Web",
+      "description": "Bienvenue sur mon site web personnel",
+      "images": ["/images/default-og.jpg"],
+      "url": "https://monsite.com",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Mon Site Web",
+      "description": "Bienvenue sur mon site web personnel",
+      "images": ["/images/default-og.jpg"]
+    }
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "description": "Prenez contact avec moi pour toute question ou demande",
+    "openGraph": {
+      "title": "Contactez-moi",
+      "description": "Prenez contact avec moi pour toute question ou demande",
+      "images": ["/images/contact-og.jpg"],
+      "url": "https://monsite.com/contact",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Contactez-moi",
+      "description": "Prenez contact avec moi pour toute question ou demande",
+      "images": ["/images/contact-og.jpg"]
+    }
+  },
+  "portfolio": {
+    "title": "Mon Portfolio",
+    "description": "Découvrez mes projets et réalisations",
+    "openGraph": {
+      "title": "Mon Portfolio",
+      "description": "Découvrez mes projets et réalisations",
+      "images": ["/images/portfolio-og.jpg"],
+      "url": "https://monsite.com/portfolio",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Mon Portfolio",
+      "description": "Découvrez mes projets et réalisations",
+      "images": ["/images/portfolio-og.jpg"]
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "description": "Lisez mes derniers articles et actualités",
+    "openGraph": {
+      "title": "Blog",
+      "description": "Lisez mes derniers articles et actualités",
+      "images": ["/images/blog-og.jpg"],
+      "url": "https://monsite.com/blog",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Blog",
+      "description": "Lisez mes derniers articles et actualités",
+      "images": ["/images/blog-og.jpg"]
+    }
+  },
+  "publications": {
+    "title": "Mes Publications",
+    "description": "Découvrez mes dernières publications ",
+    "openGraph": {
+      "title": "Mes Publications",
+      "description": "Découvrez mes dernières publications ",
+      "images": ["/images/publications-og.jpg"],
+      "url": "https://monsite.com/publications",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Mes Publications",
+      "description": "Découvrez mes dernières publications ",
+      "images": ["/images/publications-og.jpg"]
+    }
+  }
+}
