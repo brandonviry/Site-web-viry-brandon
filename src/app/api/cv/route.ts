@@ -21,7 +21,7 @@ export async function GET() {
 }
 
 async function getDatabaseDataProfil() {
-  const response = await notion.databases.query({ database_id: databaseId });
+  const response = await notion.databases.query({ database_id: process.env.NOTION_DATABASE_ID_CV as string});
 
   const data = response.results.filter(isPageObjectResponse).map((page) => {
     const properties = page.properties;
@@ -32,8 +32,6 @@ async function getDatabaseDataProfil() {
         .map((item) => (item.type === "text" ? item.text.content : ""))
         .join("");
     };
-
-
 
     const description =
       properties.description?.type === "title" && properties.description.title.length > 0
@@ -52,12 +50,8 @@ async function getDatabaseDataProfil() {
         ? properties.lang.multi_select.map((lang:any) => lang.name)
         : [];
 
-   
-
-    return {  description, CompTechnique, lang };
+    return { description, CompTechnique, lang };
   });
-
-
 
   return data;
 }
