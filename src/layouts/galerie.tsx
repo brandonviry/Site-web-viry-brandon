@@ -1,5 +1,5 @@
 import Projet from "@/components/projet"
-import { getDatabaseData } from '../app/api/galerie/route';
+import { getDatabaseDataGalerie } from '../utils/notionUtils';
 
 
 interface GalerieData {
@@ -18,7 +18,7 @@ export default async function Galerie() {
       throw new Error('NOTION_DATABASE_ID is not defined in environment variables.');
     }
   
-    const data:GalerieData[] = await getDatabaseData(databaseId);
+    const data:GalerieData[] = await getDatabaseDataGalerie(databaseId);
 
     return (
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">

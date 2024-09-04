@@ -3,10 +3,7 @@ import ExperienceSection from '@/components/cv/ExperienceSection';
 import EducationSection from '@/components/cv/EducationSection';
 import SkillsSection from '@/components/cv/SkillSection';
 import LanguagesSection from '@/components/cv/LanguagesSection';
-import { getDatabaseDataProfil } from '../app/api/cv/route';
-import { getDatabaseDataXp } from '../app/api/xp/route';
-import { getDatabaseDataEdu } from '../app/api/edu/route';
-import { console } from 'inspector';
+import { getDatabaseDataProfil, getDatabaseDataXp, getDatabaseDataEdu } from '../utils/notionUtils';
 
 interface ProfilData {
     description: string;

@@ -1,45 +1,16 @@
-import { Client } from "@notionhq/client";
-import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import { NextResponse } from 'next/server';
+import { getDatabaseDataEdu } from '@/utils/notionUtils';
 
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
-
-// Fonction pour vérifier si l'objet est une page
-function isPageObjectResponse(obj: any): obj is PageObjectResponse {
-  return "properties" in obj;
-}
-
-// Fonction pour obtenir les données de la base de données Notion
-export async function getDatabaseDataEdu(databaseId: string) {
-  const response = await notion.databases.query({ database_id: databaseId });
-
-  const data = response.results.filter(isPageObjectResponse).map((page) => {
-    const properties = page.properties;
-
-    // Fonction pour obtenir le contenu du texte riche
-    const getRichTextContent = (richTextItems: any[]) => {
-      return richTextItems
-        .map((item) => (item.type === "text" ? item.text.content : ""))
-        .join("");
-    };
-
-
-
-    const Nom =
-      properties.Nom?.type === "title" && properties.Nom.title.length > 0
-        ? getRichTextContent(properties.Nom.title)
-        : "Untitled";
-
-    const Date =
-      properties.Date?.type === "rich_text" &&
-      properties.Date.rich_text.length > 0
-        ? getRichTextContent(properties.Date.rich_text)
-        : "-";
-
-    
-    return {  Nom, Date };  
-  });
-
-
-
-  return data;
+export async function GET() {
+  try {
+    const databaseId = process.env.NOTION_DATABASE_ID_EDU;
+    if (!databaseId) {
+      throw new Error('NOTION_DATABASE_ID_EDU is not defined in environment variables.');
+    }
+    const data = await getDatabaseDataEdu(databaseId);
+    return NextResponse.json(data);
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données d\'éducation:', error);
+    return NextResponse.json({ error: 'Erreur interne du serveur' }, { status: 500 });
+  }
 }

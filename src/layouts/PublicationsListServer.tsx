@@ -1,4 +1,4 @@
-import { getDatabaseData } from '@/app/api/publication/route';
+import { getDatabaseDataPublication } from '@/utils/notionUtils';
 import PublicationsListClient from './PublicationsListClient';
 
 interface PubData {
@@ -10,11 +10,11 @@ export default async function PublicationsListServer() {
   const databaseId = process.env.NOTION_DATABASE_ID_PUB;
   
   if (!databaseId) {
-    throw new Error('NOTION_DATABASE_ID is not defined in environment variables.');
+    throw new Error('NOTION_DATABASE_ID_PUB is not defined in environment variables.');
   }
 
   try {
-    const data: PubData[] = await getDatabaseData(databaseId);
+    const data: PubData[] = await getDatabaseDataPublication(databaseId);
     const uniquePublications = Array.from(new Set(data.map(item => item.lien)))
       .map(url => ({ url }));
     return <PublicationsListClient initialPublications={uniquePublications} />;
