@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: BlogPostProps) {
       title: frontMatter.title,
       description: frontMatter.excerpt,
       images: frontMatter.coverImage ? [frontMatter.coverImage] : [],
-      url: `https://votre-domaine.com/blog/${params.slug}`,
+      url: `https://site-web-viry-brandon.vercel.app/blog/${params.slug}`,
       type: 'article',
       publishedTime: frontMatter.date,
       authors: [frontMatter.author],
