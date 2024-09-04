@@ -1,5 +1,6 @@
 import { Client } from "@notionhq/client";
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import { NextResponse } from 'next/server';
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
@@ -9,7 +10,17 @@ function isPageObjectResponse(obj: any): obj is PageObjectResponse {
 }
 
 // Fonction pour obtenir les données de la base de données Notion
-export async function getDatabaseDataProfil(databaseId: string) {
+export async function GET() {
+  try {
+    const data = await getDatabaseDataProfil();
+    return NextResponse.json(data);
+  } catch (error) {
+    console.error('Erreur lors de la récupération des données du profil:', error);
+    return NextResponse.json({ error: 'Erreur interne du serveur' }, { status: 500 });
+  }
+}
+
+async function getDatabaseDataProfil() {
   const response = await notion.databases.query({ database_id: databaseId });
 
   const data = response.results.filter(isPageObjectResponse).map((page) => {
