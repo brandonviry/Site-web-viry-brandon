@@ -20,6 +20,6 @@ export default async function PublicationsListServer() {
     return <PublicationsListClient initialPublications={uniquePublications} />;
   } catch (error) {
     console.error('Erreur lors de la récupération des données:', error);
-    return <div>Une erreur s'est produite lors du chargement des publications.</div>;
+    return <div>Une erreur s&#39;est produite lors du chargement des publications.</div>;
   }
 }

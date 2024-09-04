@@ -45,7 +45,7 @@ export default async function Blog() {
                       {slug.replace(/-/g, ' ')}
                     </h2>
                     <p className="text-gray-400 text-sm">
-                      Cliquez pour lire l'article complet
+                      Cliquez pour lire l&#39;article complet
                     </p>
                   </div>
                 </div>

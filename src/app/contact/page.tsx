@@ -10,7 +10,7 @@ export default function Contact() {
           <div className="bg-gradient-to-b from-gray-800 to-gray-900 py-12 px-4">
             <div className="max-w-6xl mx-auto">
               <h1 className="text-5xl font-bold mb-4 text-blue-400">Contact</h1>
-              <p className="text-xl text-gray-300">N'hésitez pas à me contacter</p>
+              <p className="text-xl text-gray-300">N&#39;hésitez pas à me contacter</p>
             </div>
           </div>
           <div className="max-w-6xl mx-auto px-4 py-12">
