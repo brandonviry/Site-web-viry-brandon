@@ -6,7 +6,7 @@
       "title": "Mon Site Web",
       "description": "Bienvenue sur mon site web personnel",
       "images": ["/images/default-og.jpg"],
-      "url": "https://monsite.com",
+      "url": "https://site-web-viry-brandon.vercel.app/",
       "type": "website"
     },
     "twitter": {
@@ -23,7 +23,7 @@
       "title": "Contactez-moi",
       "description": "Prenez contact avec moi pour toute question ou demande",
       "images": ["/images/contact-og.jpg"],
-      "url": "https://monsite.com/contact",
+      "url": "https://site-web-viry-brandon.vercel.app/contact",
       "type": "website"
     },
     "twitter": {
@@ -40,7 +40,7 @@
       "title": "Mon Portfolio",
       "description": "Découvrez mes projets et réalisations",
       "images": ["/images/portfolio-og.jpg"],
-      "url": "https://monsite.com/portfolio",
+      "url": "https://site-web-viry-brandon.vercel.app/portfolio",
       "type": "website"
     },
     "twitter": {
@@ -57,7 +57,7 @@
       "title": "Blog",
       "description": "Lisez mes derniers articles et actualités",
       "images": ["/images/blog-og.jpg"],
-      "url": "https://monsite.com/blog",
+      "url": "https://site-web-viry-brandon.vercel.app/blog",
       "type": "website"
     },
     "twitter": {
@@ -74,7 +74,7 @@
       "title": "Mes Publications",
       "description": "Découvrez mes dernières publications ",
       "images": ["/images/publications-og.jpg"],
-      "url": "https://monsite.com/publications",
+      "url": "https://site-web-viry-brandon.vercel.app/publications",
       "type": "website"
     },
     "twitter": {
