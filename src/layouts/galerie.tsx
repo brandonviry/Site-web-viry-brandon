@@ -1,6 +1,7 @@
 import Projet from "@/components/projet"
 import { getDatabaseDataGalerie } from '../utils/notionUtils';
 
+export const dynamic = 'force-dynamic';
 
 interface GalerieData {
    

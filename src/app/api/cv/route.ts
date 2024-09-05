@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { getDatabaseDataProfil } from '@/utils/notionUtils';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     const databaseId = process.env.NOTION_DATABASE_ID_CV;

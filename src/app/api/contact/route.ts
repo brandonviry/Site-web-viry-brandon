@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { ajouterPageALaBaseDeDonnees } from '@/utils/notion';
 import { contactFormSchema } from '@/schemas/contactFormSchema';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: Request) {
   console.log('Début du traitement de la requête POST');
   try {

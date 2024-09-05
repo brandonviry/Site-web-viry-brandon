@@ -2,6 +2,8 @@ import Galerie from "@/layouts/galerie";
 import { Metadata } from 'next';
 import metatags from '@/data/metatags.json';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = metatags.portfolio;
 
 export default function Portfolio() {

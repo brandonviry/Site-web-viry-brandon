@@ -2,6 +2,8 @@ import ContactForm from "@/layouts/contact";
 import { Metadata } from 'next';
 import metatags from '@/data/metatags.json';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = metatags.contact;
 
 export default function Contact() {

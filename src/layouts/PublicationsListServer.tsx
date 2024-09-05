@@ -6,6 +6,8 @@ interface PubData {
   lien: string;
 }
 
+export const dynamic = 'force-dynamic';
+
 export default async function PublicationsListServer() {
   const databaseId = process.env.NOTION_DATABASE_ID_PUB;
   

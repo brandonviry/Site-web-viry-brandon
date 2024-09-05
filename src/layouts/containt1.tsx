@@ -24,6 +24,8 @@ interface EduData {
 }
 
 
+export const dynamic = 'force-dynamic';
+
 export default async function Containt1() {
 
     const databaseId: string[] = [process.env.NOTION_DATABASE_ID_CV as string, process.env.NOTION_DATABASE_ID_XP as string ,process.env.NOTION_DATABASE_ID_EDU as string];

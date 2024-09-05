@@ -18,6 +18,8 @@ function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)];
 }
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = metatags.blog;
 
 export default async function Blog() {

@@ -2,6 +2,8 @@ import PublicationsListServer  from "@/layouts/PublicationsListServer";
 import { Metadata } from 'next';
 import metatags from '@/data/metatags.json';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = metatags.publications;
 
 export default function Publications() {
