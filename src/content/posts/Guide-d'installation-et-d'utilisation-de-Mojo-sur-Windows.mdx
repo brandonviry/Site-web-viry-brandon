@@ -5,6 +5,7 @@ author: "VIRY Brandon"
 excerpt: "Un guide complet sur Mojo, ses avantages et son utilisation dans les projets web modernes"
 tags: ["Mojo", "Python", "JavaScript", "Développement Web", "Guide d'installation", "Windows", "WSL", "Linux", "Terminal", "Commande", "Terminal Linux"]
 ---
+
 # Guide d'installation et d'utilisation de Mojo sur Windows
 
 https://docs.modular.com/mojo/manual/
@@ -16,37 +17,34 @@ Pour installer Mojo sur un système Windows en utilisant Windows Subsystem for L
 1. **Installation de Modular** :
 Ouvrez votre terminal WSL et exécutez la commande suivante pour télécharger et installer Modular :
     
-    ```
-    curl -s https://get.modular.com | sh -
-    
-    ```
+<Prog language="bash">
+{`curl -s https://get.modular.com | sh -`}
+</Prog>
     
 2. **Créer et activer un environnement virtuel** :
 Créez un environnement virtuel Python et activez-le :
     
-    ```
-    python3 -m venv mojo-venv && source mojo-venv/bin/activate
-    
-    ```
+<Prog language="bash">
+{`python3 -m venv mojo-venv && source mojo-venv/bin/activate`}
+</Prog>
     
 3. **Installer Mojo** :
 Installez Mojo en utilisant Modular :
     
-    ```
-    modular install mojo
-    ```
+<Prog language="bash">
+{`modular install mojo`}
+</Prog>
     
 4. **Configurer les variables d'environnement** :
 Configurez les variables d'environnement pour utiliser Mojo plus facilement :
     
-    ```
-    MOJO_PATH=$(modular config mojo.path) \\
-    && BASHRC=$( [ -f "$HOME/.bash_profile" ] && echo "$HOME/.bash_profile" || echo "$HOME/.bashrc" ) \\
-    && echo 'export MODULAR_HOME="'$HOME'/.modular"' >> "$BASHRC" \\
-    && echo 'export PATH="'$MOJO_PATH'/bin:$PATH"' >> "$BASHRC" \\
-    && source "$BASHRC"
-    
-    ```
+<Prog language="bash">
+{`MOJO_PATH=$(modular config mojo.path) \\
+&& BASHRC=$( [ -f "$HOME/.bash_profile" ] && echo "$HOME/.bash_profile" || echo "$HOME/.bashrc" ) \\
+&& echo 'export MODULAR_HOME="'$HOME'/.modular"' >> "$BASHRC" \\
+&& echo 'export PATH="'$MOJO_PATH'/bin:$PATH"' >> "$BASHRC" \\
+&& source "$BASHRC"`}
+</Prog>
     
 
 ## Exécution de Mojo
@@ -59,19 +57,17 @@ Créez un fichier nommé `hello.mojo` ou `hello.🔥` contenant le code Mojo.
 
 Pour exécuter un script Mojo, utilisez la commande suivante :
 
-```
-mojo hello.mojo
-
-```
+<Prog language="bash">
+{`mojo hello.mojo`}
+</Prog>
 
 ### Compilation du code
 
 Pour compiler un script Mojo, utilisez la commande suivante :
 
-```
-mojo build hello.mojo
-
-```
+<Prog language="bash">
+{`mojo build hello.mojo`}
+</Prog>
 
 ## Syntaxe de base de Mojo
 
@@ -79,37 +75,33 @@ mojo build hello.mojo
 
 Définir une fonction en Mojo :
 
-```python
-fn nom_fonction(para:TypePara, ...) -> TypeRetour:
-    expression
-
-```
+<Prog language="python">
+{`fn nom_fonction(para:TypePara, ...) -> TypeRetour:
+    expression`}
+</Prog>
 
 Exemple :
 
-```jsx
-fn greet(name: String) -> String:
-    return "Hello, " + name + "!"
-
-```
+<Prog language="python">
+{`fn greet(name: String) -> String:
+    return "Hello, " + name + "!"`}
+</Prog>
 
 ### Variables
 
 Déclaration de variables en Mojo :
 
-```python
-var nom:type = valeur
-
-```
+<Prog language="python">
+{`var nom:type = valeur`}
+</Prog>
 
 Exemple :
 
-```jsx
-fn add_one(x):
+<Prog language="python">
+{`fn add_one(x):
     var y: Int = 1
-    print(x + y)
-
-```
+    print(x + y)`}
+</Prog>
 
 ### Types
 
@@ -143,85 +135,83 @@ Chaine de caractère :
 
 (concaténation) ⇒ `+` 
 
-```python
-	var chaine:String = "Salut !"
-	chaine+= "Je suis MOJO"
-	print(chaine)
-```
+<Prog language="python">
+{`var chaine:String = "Salut !"
+chaine+= "Je suis MOJO"
+print(chaine)`}
+</Prog>
 
 (conversion explicite ) ⇒  `str(element )` ou `string(element)` 
 
-```python
-var chaine = "LAPIN_" + str(974)
-print(chaine)
-```
+<Prog language="python">
+{`var chaine = "LAPIN_" + str(974)
+print(chaine)`}
+</Prog>
 
 (Plusieurs ligne) 
 
-```python
-  var chaine :String = "Speudo:"
-  						"LAPIN"
-  						"_"
-  						"974"
-  print(chaine)
-
-```
+<Prog language="python">
+{`var chaine :String = "Speudo:"
+                       "LAPIN"
+                       "_"
+                       "974"
+print(chaine)`}
+</Prog>
 
 (multi-line)
 
-```python
-  var chaine:String = """
-  Multi-line string literals let you
-  enter long blocks of text, including 
-  newlines."""  
-  print(chaine)
-```
+<Prog language="python">
+{`var chaine:String = """
+Multi-line string literals let you
+enter long blocks of text, including 
+newlines."""  
+print(chaine)`}
+</Prog>
 
 Boolean
 
-```python
-  var val_A:Int = 1
-  var val_B: Int = 1
-  var comp:Bool = val_B == val_A
-  print(comp, val_B == val_A-1)
-```
+<Prog language="python">
+{`var val_A:Int = 1
+var val_B: Int = 1
+var comp:Bool = val_B == val_A
+print(comp, val_B == val_A-1)`}
+</Prog>
 
 List
 
-```python
-
-  var lst= List[Int](1,2,3,4,5) 
-  for index_elt in range(len(lst)) :
-    	print(lst[index_elt])
-```
+<Prog language="python">
+{`var lst= List[Int](1,2,3,4,5) 
+for index_elt in range(len(lst)) :
+    print(lst[index_elt])`}
+</Prog>
 
 Dict
 
-```python
-    var coords = Dict[String, String]()
-    coords["position"] = "10x78"
-    for elt in coords:.items():
-      print(elt[].key,elt[].value)
-```
+<Prog language="python">
+{`var coords = Dict[String, String]()
+coords["position"] = "10x78"
+for elt in coords:.items():
+  print(elt[].key,elt[].value)`}
+</Prog>
 
 Set
 
-```python
-    var fruit = Set("Pomme","Banane","Melon","Orange","Raisin","Pasteque")
-    var legume = Set("Salade","Carote","Courgette", "Harico vert")
-    
-    var pannier = fruit.union(legume)
-    
-    for elt in pannier:
-      print(elt[])
-```
+<Prog language="python">
+{`var fruit = Set("Pomme","Banane","Melon","Orange","Raisin","Pasteque")
+var legume = Set("Salade","Carote","Courgette", "Harico vert")
+
+var pannier = fruit.union(legume)
+
+for elt in pannier:
+  print(elt[])`}
+</Prog>
 
 ### Structures
 
 Définir une structure en Mojo :
 
-```python
-struct Nom:
+<Prog language="python">
+{`struct Nom:
     var attribut1: type
     var attribut2: type
 
@@ -229,14 +219,13 @@ struct Nom:
         # méthode d'initialisation
 
     fn methode(self):
-        # méthode
-
-```
+        # méthode`}
+</Prog>
 
 Exemple :
 
-```jsx
-struct MyPair:
+<Prog language="python">
+{`struct MyPair:
     var first: Int
     var second: Int
 
@@ -245,99 +234,90 @@ struct MyPair:
         self.second = second
 
     fn dump(self):
-        print(self.first, self.second)
-
-```
+        print(self.first, self.second)`}
+</Prog>
 
 Utilisation de la structure :
 
-```jsx
-fn use_mypair():
+<Prog language="python">
+{`fn use_mypair():
     var mine = MyPair(2, 4)
-    mine.dump()
-
-```
+    mine.dump()`}
+</Prog>
 
 ### Traits
 
 Définir et utiliser des traits en Mojo :
 
-```python
-trait SomeTrait:
-    fn required_method(self, x: Int): ...
+<Prog language="python">
+{`trait SomeTrait:
+    fn required_method(self, x: Int): ...`}
+</Prog>
 
-```
-
-```python
-@value
+<Prog language="python">
+{`@value
 struct SomeStruct(SomeTrait):
     fn required_method(self, x: Int):
-        print("hello traits", x)
+        print("hello traits", x)`}
+</Prog>
 
-```
-
-```python
-fn fun_with_traits[T: SomeTrait](x: T):
+<Prog language="python">
+{`fn fun_with_traits[T: SomeTrait](x: T):
     x.required_method(42)
 
 fn use_trait_function():
     var thing = SomeStruct()
-    fun_with_traits(thing)
-
-```
+    fun_with_traits(thing)`}
+</Prog>
 
 ### Paramétrage
 
 Définir une fonction paramétrée :
 
-```python
-fn repeat[count: Int](msg: String):
+<Prog language="python">
+{`fn repeat[count: Int](msg: String):
     for i in range(count):
-        print(msg)
-
-```
+        print(msg)`}
+</Prog>
 
 Exemple :
 
-```python
-fn call_repeat():
+<Prog language="python">
+{`fn call_repeat():
     repeat[3]("Hello")
-    # Affiche "Hello" 3 fois
-
-```
+    # Affiche "Hello" 3 fois`}
+</Prog>
 
 ### Blocs d'instruction
 
-Les blocs sont   comme pour les bloc en python  c’est adire avec les tabulation ,  les deux point 
+Les blocs sont comme pour les bloc en python c'est-à-dire avec les tabulations, les deux points 
 
 Exemples de blocs d'instructions :
 
-```python
-fn main():
-	var nb :Int = 2
-	print("SALUT DE MOJO 🔥 !!! ") 
-	print("= TABLE DE MUTIPLICATION DE" , nb," =")
-	for elt in range(10):
-		 print(elt,"*",nb,"=",elt*nb)
-
-```
+<Prog language="python">
+{`fn main():
+    var nb :Int = 2
+    print("SALUT DE MOJO 🔥 !!! ") 
+    print("= TABLE DE MUTIPLICATION DE" , nb," =")
+    for elt in range(10):
+         print(elt,"*",nb,"=",elt*nb)`}
+</Prog>
 
 **Remarque importante :** En Mojo, il est possible de définir une chaîne de caractères sur plusieurs lignes en utilisant plusieurs séquences de caractères. Par exemple :
 
-```python
-fn print_multi_line():
+<Prog language="python">
+{`fn print_multi_line():
     var citation: String = "Mon nom est Tony Stark et je ne suis pas celui qu'on pense."
-    					"— Tony Stark, Iron Man 3 (2013)"
-    print(citation)
-
-```
+                           "— Tony Stark, Iron Man 3 (2013)"
+    print(citation)`}
+</Prog>
 
 ### Commentaires
 
 Les commentaires en Mojo :
 
-```jsx
-# Commentaire Mojo
+<Prog language="python">
+{`# Commentaire Mojo
 
 print("lapin") # Commentaire en ligne
 
@@ -345,30 +325,29 @@ print("lapin") # Commentaire en ligne
 Docstring
 
 Args: None
-"""
-
-```
+"""`}
+</Prog>
 
 ### Structure de control
 
 ( if )
 
-```python
-      var temp_celsius = 25
-      if temp_celsius <= 0:
-          print("It is freezing.")
-      elif temp_celsius < 20:
-        print("It is cool.")
-      elif temp_celsius < 30:
-        print("It is warm.")
-      else:
-          print("It is hot.")
-```
+<Prog language="python">
+{`var temp_celsius = 25
+if temp_celsius <= 0:
+    print("It is freezing.")
+elif temp_celsius < 20:
+  print("It is cool.")
+elif temp_celsius < 30:
+  print("It is warm.")
+else:
+    print("It is hot.")`}
+</Prog>
 
 (évalution court-circuits)
 
-```python
-fn true_func() -> Bool:
+<Prog language="python">
+{`fn true_func() -> Bool:
     print("Executing true_func")
     return True
 
@@ -379,69 +358,67 @@ fn false_func() -> Bool:
 fn main():
     print('Short-circuit "or" evaluation')
     if true_func() or false_func():
-        print("True result")
-```
+        print("True result")`}
+</Prog>
 
 (Expressions cond)
 
-```python
-  var temp_celsius = 15
-  var forecast = "warm" if temp_celsius > 20 else "cool"
-  print("The forecast for today is", forecast)
-```
+<Prog language="python">
+{`var temp_celsius = 15
+var forecast = "warm" if temp_celsius > 20 else "cool"
+print("The forecast for today is", forecast)`}
+</Prog>
 
 (while)
 
-```python
-    var n = 0
-    while n < 5:
-        n += 1
-        if n == 3:
-            continue
-        print(n, end=", ")
-```
+<Prog language="python">
+{`var n = 0
+while n < 5:
+    n += 1
+    if n == 3:
+        continue
+    print(n, end=", ")`}
+</Prog>
 
-```python
-    var n = 0
-    while n < 5:
-        n += 1
-        if n == 3:
-            break
-    print(n, end=", ")
-```
+<Prog language="python">
+{`var n = 0
+while n < 5:
+    n += 1
+    if n == 3:
+        break
+print(n, end=", ")`}
+</Prog>
 
 (for)
 
-```python
-for i in range(5):
-    print(i, end=", ")
-```
+<Prog language="python">
+{`for i in range(5):
+    print(i, end=", ")`}
+</Prog>
 
-```python
-    var animals = List[String]("cat", "aardvark", "hippopotamus", "dog")
-    for animal in animals:
-        if animal[] == "dog":
-            print("Found a dog")
-            break
-    else:
-        print("No dog found")
-
-```
+<Prog language="python">
+{`var animals = List[String]("cat", "aardvark", "hippopotamus", "dog")
+for animal in animals:
+    if animal[] == "dog":
+        print("Found a dog")
+        break
+else:
+    print("No dog found")`}
+</Prog>
 
 ### Intégration avec Python
 
 Utiliser des modules Python dans Mojo :
 
-```python
-from python import Python
+<Prog language="python">
+{`from python import Python
 
 fn use_numpy() raises:
     var np = Python.import_module("numpy")
     var ar = np.arrange(15).reshape(3,5)
     print(ar)
-    print(ar.shape)
-
-```
+    print(ar.shape)`}
+</Prog>
 
 Pour plus d'informations, consultez la documentation officielle de Mojo : [Mojo Documentation](https://docs.modular.com/mojo/manual/).
 
@@ -459,8 +436,8 @@ Dans cet exercice, vous devrez créer une fonction `somme_liste` qui parcourt ch
 
 ### Solution :
 
-```python
-fn somme_liste(lst: List[Int]) -> Int:
+<Prog language="python">
+{`fn somme_liste(lst: List[Int]) -> Int:
     var somme: Int = 0
     for nb in lst:
         somme += nb[]
@@ -469,5 +446,5 @@ fn somme_liste(lst: List[Int]) -> Int:
 fn main():
     var nombres = List[Int](1, 2, 3, 4, 5)
     var total = somme_liste(nombres)
-    print("La somme de la liste est de", total)
-```
+    print("La somme de la liste est de", total)`}
+</Prog>

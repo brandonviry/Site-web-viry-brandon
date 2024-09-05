@@ -25,7 +25,7 @@ export default async function Post({ params }: BlogPostProps) {
   return (
     <section>
       <article className='min-h-screen max-w-4xl mx-auto px-6 py-10' id='article'>
-        <h1 className="text-3xl font-bold mb-6">{post.frontMatter.title}</h1>
+        {/* <h1 className="text-3xl font-bold mb-6">{post.frontMatter.title}</h1> */}
         <MDXContent source={post.content} />
       </article>
     </section>
