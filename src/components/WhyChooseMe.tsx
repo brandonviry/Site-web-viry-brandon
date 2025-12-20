@@ -13,9 +13,9 @@ export default function WhyChooseMe() {
         </p>
 
         <p className="text-gray-300 mb-6 leading-relaxed">
-          Avec plusieurs années d'expérience dans le <strong>développement web</strong>, j'ai accompagné de nombreux
-          clients dans la création de solutions digitales innovantes. De l'application e-commerce au dashboard
-          d'entreprise, chaque projet est une opportunité de repousser les limites du possible avec les
+          Avec plusieurs années d&apos;expérience dans le <strong>développement web</strong>, j&apos;ai accompagné de nombreux
+          clients dans la création de solutions digitales innovantes. De l&apos;application e-commerce au dashboard
+          d&apos;entreprise, chaque projet est une opportunité de repousser les limites du possible avec les
           technologies web les plus récentes.
         </p>
       </div>
@@ -72,7 +72,7 @@ export default function WhyChooseMe() {
           Mon Approche du Développement Web
         </h3>
         <p className="text-gray-300 mb-4 leading-relaxed">
-          Chaque projet de <strong>développement web</strong> commence par une phase d'écoute et d'analyse
+          Chaque projet de <strong>développement web</strong> commence par une phase d&apos;écoute et d&apos;analyse
           approfondie de vos besoins. Cette approche méthodique me permet de proposer des solutions
           techniques adaptées qui répondent parfaitement à vos objectifs business.
         </p>
