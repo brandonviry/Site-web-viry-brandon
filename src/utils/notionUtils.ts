@@ -8,15 +8,15 @@ function isPageObjectResponse(obj: any): obj is PageObjectResponse {
 }
 
 function isTitleProperty(property: any): property is TitlePropertyItemObjectResponse {
-  return property.type === "title";
+  return property && property.type === "title";
 }
 
 function isRichTextProperty(property: any): property is RichTextPropertyItemObjectResponse {
-  return property.type === "rich_text";
+  return property && property.type === "rich_text";
 }
 
 function isMultiSelectProperty(property: any): property is MultiSelectPropertyItemObjectResponse {
-  return property.type === "multi_select";
+  return property && property.type === "multi_select";
 }
 
 function getRichTextContent(richTextItems: { type: string; text?: { content: string } }[]): string {
@@ -68,11 +68,12 @@ export async function getDatabaseDataGalerie(databaseId: string) {
   const response = await queryDatabase(databaseId);
   return response.results.filter(isPageObjectResponse).map((page) => {
     const properties = page.properties;
+
     return {
       titre: isTitleProperty(properties.titre) ? getRichTextContent(properties.titre.title) : "Untitled",
       description: isRichTextProperty(properties.description) ? getRichTextContent(properties.description.rich_text) : "-",
-      image: isRichTextProperty(properties.image) ? getRichTextContent(properties.image.rich_text) : "https://placehold.co/1080x720/png",
-      lien: isRichTextProperty(properties.lien) ? getRichTextContent(properties.lien.rich_text) : "#"
+      image: isRichTextProperty(properties["Cover "]) ? getRichTextContent(properties["Cover "].rich_text) : "https://placehold.co/1080x720/png",
+      lien: isRichTextProperty(properties.Lien) ? getRichTextContent(properties.Lien.rich_text) : "#"
     };
   });
 }
