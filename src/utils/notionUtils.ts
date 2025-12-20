@@ -82,8 +82,13 @@ export async function getDatabaseDataPublication(databaseId: string) {
   const response = await queryDatabase(databaseId);
   return response.results.filter(isPageObjectResponse).map((page) => {
     const properties = page.properties;
+
+    // Debug: voir les propriétés disponibles
+    console.log("Properties disponibles pour publication:", Object.keys(properties));
+
     return {
       Site: isTitleProperty(properties.Site) ? getRichTextContent(properties.Site.title) : "Untitled",
+      type: isMultiSelectProperty(properties.type) ? properties.type.multi_select.map(item => item.name) : [],
       lien: isRichTextProperty(properties.lien) ? getRichTextContent(properties.lien.rich_text) : "/"
     };
   });

@@ -15,7 +15,7 @@ export default function Publications() {
               <p className="text-xl text-gray-300">Découvrez mes dernières publications</p>
             </div>
           </div>
-          <div className="max-w-6xl mx-auto px-4 py-12">
+          <div className="max-w-6xl mx-auto">
           <PublicationsListServer />
           </div>
         </main>

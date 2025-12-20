@@ -34,7 +34,7 @@ export default async function Post({ params }: BlogPostProps) {
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
-  return posts.map(slug => ({ slug }))
+  return posts.map(post => ({ slug: post.slug }))
 }
 
 export async function generateMetadata({ params }: BlogPostProps) {
