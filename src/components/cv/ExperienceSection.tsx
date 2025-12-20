@@ -8,7 +8,7 @@ import ExpSolo from "../expSolo";
 export default function ExperienceSection({exp}:expProps) {
     return (
         <article className="mb-12">
-            <h3 className="text-2xl font-semibold mb-4 text-blue-400">Parcours Professionnel</h3>
+            <h3 className="text-2xl font-semibold mb-4 text-blue-400">Expérience en Développement Web React & TypeScript</h3>
             <div className="border border-gray-700 p-6 rounded-lg bg-gray-800">
               {
                     exp.map((exp:{title:string,date:string,taches:string[]}) => (

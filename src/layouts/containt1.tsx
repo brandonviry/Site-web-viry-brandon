@@ -3,6 +3,8 @@ import ExperienceSection from '@/components/cv/ExperienceSection';
 import EducationSection from '@/components/cv/EducationSection';
 import SkillsSection from '@/components/cv/SkillSection';
 import LanguagesSection from '@/components/cv/LanguagesSection';
+import InternalLinks, { homeLinks } from '@/components/InternalLinks';
+import WhyChooseMe from '@/components/WhyChooseMe';
 import { getDatabaseDataProfil, getDatabaseDataXp, getDatabaseDataEdu } from '../utils/notionUtils';
 
 interface ProfilData {
@@ -44,7 +46,7 @@ export default async function Containt1() {
     return (
         <section className="w-full text-gray-100 py-12">
             <div className="max-w-4xl mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-8 text-white">Profil Professionnel</h2>
+                <h2 className="text-3xl font-bold mb-8 text-white">Profil de Développeur Web Full Stack React & Next.js</h2>
                 <ProfileSection description={cv[0].description} />
                 <ExperienceSection exp={xp.map((xpsolo: XpData) => {
                     return ({ title: xpsolo.titre, date: xpsolo.Date, taches: xpsolo.tache })
@@ -54,6 +56,12 @@ export default async function Containt1() {
                 })}/>
                 <SkillsSection skills={cv[0].CompTechnique} />
                 <LanguagesSection lang={cv[0].lang} />
+
+                {/* Section SEO - Pourquoi me choisir */}
+                <WhyChooseMe />
+
+                {/* Liens internes SEO */}
+                <InternalLinks links={homeLinks} title="Explorez mon travail" className="mt-12" />
             </div>
         </section>
     );

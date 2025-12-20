@@ -1,4 +1,5 @@
 import Galerie from "@/layouts/galerie";
+import InternalLinks, { portfolioLinks } from '@/components/InternalLinks';
 import { Metadata } from 'next';
 import metatags from '@/data/metatags.json';
 
@@ -12,11 +13,14 @@ export default function Portfolio() {
           <div className="bg-gradient-to-b from-gray-800 to-gray-900 py-12 px-4">
             <div className="max-w-6xl mx-auto">
               <h1 className="text-5xl font-bold mb-4 text-blue-400">Portfolio</h1>
-              <p className="text-xl text-gray-300">Découvrez mes réalisations</p>
+              <p className="text-xl text-gray-300">Développeur web full stack spécialisé en React, Next.js et TypeScript. Découvrez mes projets de développement web, applications modernes et solutions innovantes.</p>
             </div>
           </div>
           <div className="max-w-6xl mx-auto px-4 py-12">
             <Galerie />
+
+            {/* Liens internes SEO */}
+            <InternalLinks links={portfolioLinks} title="Continuez votre visite" className="mt-16" />
           </div>
         </main>
     );

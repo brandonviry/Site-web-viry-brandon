@@ -1,86 +1,98 @@
 {
   "default": {
-    "title": "Mon Site Web",
-    "description": "Bienvenue sur mon site web personnel",
+    "title": "VIRY Brandon - Développeur Web Full Stack | Portfolio & Blog Tech",
+    "description": "VIRY Brandon, développeur web full stack spécialisé en React, Next.js et TypeScript. Découvrez mon portfolio de projets, articles de blog et publications tech.",
+    "keywords": "développeur web, full stack, React, Next.js, TypeScript, portfolio développeur, blog tech, VIRY Brandon",
     "openGraph": {
-      "title": "Mon Site Web",
-      "description": "Bienvenue sur mon site web personnel",
+      "title": "VIRY Brandon - Développeur Web Full Stack | Portfolio & Blog",
+      "description": "Développeur web passionné spécialisé en React, Next.js et TypeScript. Portfolio, blog et publications.",
       "images": ["/images/default-og.jpg"],
       "url": "https://site-web-viry-brandon.vercel.app/",
-      "type": "website"
+      "type": "website",
+      "locale": "fr_FR",
+      "siteName": "VIRY Brandon - Développeur Web"
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Mon Site Web",
-      "description": "Bienvenue sur mon site web personnel",
-      "images": ["/images/default-og.jpg"]
+      "title": "VIRY Brandon - Développeur Web Full Stack",
+      "description": "Développeur web spécialisé en React, Next.js et TypeScript. Portfolio & Blog.",
+      "images": ["/images/default-og.jpg"],
+      "creator": "@VIRYBrandon"
     }
   },
   "contact": {
-    "title": "Contactez-moi",
-    "description": "Prenez contact avec moi pour toute question ou demande",
+    "title": "Contact - Développeur Web Expert Disponible | Réponse Garantie 24h",
+    "description": "Contactez VIRY Brandon pour vos projets web. Développeur full stack expert disponible pour des missions freelance en React, Next.js et TypeScript. Réponse garantie sous 24h.",
+    "keywords": "contact développeur web, freelance React, développeur Next.js, collaboration projet web, VIRY Brandon contact",
     "openGraph": {
-      "title": "Contactez-moi",
-      "description": "Prenez contact avec moi pour toute question ou demande",
+      "title": "Contact Expert - Développeur Web Disponible | Réponse 24h",
+      "description": "Besoin d'un développeur web expert ? Contactez-moi pour discuter de votre projet. Disponible pour missions freelance. Réponse garantie sous 24h.",
       "images": ["/images/contact-og.jpg"],
       "url": "https://site-web-viry-brandon.vercel.app/contact",
-      "type": "website"
+      "type": "website",
+      "locale": "fr_FR"
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Contactez-moi",
-      "description": "Prenez contact avec moi pour toute question ou demande",
+      "title": "Contact Expert - Développeur Web | Réponse 24h",
+      "description": "Contactez-moi pour vos projets web React, Next.js et TypeScript. Réponse garantie sous 24h",
       "images": ["/images/contact-og.jpg"]
     }
   },
   "portfolio": {
-    "title": "Mon Portfolio",
-    "description": "Découvrez mes projets et réalisations",
+    "title": "Portfolio - 10+ Projets Web Innovants React & Next.js | VIRY Brandon",
+    "description": "Portfolio de VIRY Brandon : découvrez 10+ projets de développement web en React, Next.js et TypeScript. Applications web modernes ultra-performantes, sites professionnels et solutions sur mesure garanties.",
+    "keywords": "portfolio développeur, projets React, applications Next.js, développement web, projets TypeScript, VIRY Brandon portfolio",
     "openGraph": {
-      "title": "Mon Portfolio",
-      "description": "Découvrez mes projets et réalisations",
+      "title": "Portfolio - 10+ Projets Web Innovants | VIRY Brandon",
+      "description": "Explorez 10+ projets web professionnels : applications React performantes, sites Next.js ultra-rapides et solutions TypeScript innovantes.",
       "images": ["/images/portfolio-og.jpg"],
       "url": "https://site-web-viry-brandon.vercel.app/portfolio",
-      "type": "website"
+      "type": "website",
+      "locale": "fr_FR"
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Mon Portfolio",
-      "description": "Découvrez mes projets et réalisations",
+      "title": "Portfolio - 10+ Projets Web Innovants | VIRY Brandon",
+      "description": "Découvrez 10+ projets professionnels React, Next.js et TypeScript",
       "images": ["/images/portfolio-og.jpg"]
     }
   },
   "blog": {
-    "title": "Blog",
-    "description": "Lisez mes derniers articles et actualités",
+    "title": "Blog Expert - 50+ Tutoriels React, Next.js & TypeScript | Guide Complet",
+    "description": "Blog tech de VIRY Brandon : 50+ tutoriels détaillés, guides complets et articles pratiques sur React, Next.js, TypeScript et le développement web moderne. Conseils d'expert garantis.",
+    "keywords": "blog développement web, tutoriels React, guides Next.js, articles TypeScript, blog programmation, VIRY Brandon blog",
     "openGraph": {
-      "title": "Blog",
-      "description": "Lisez mes derniers articles et actualités",
+      "title": "Blog Expert - 50+ Tutoriels Développement Web Complets",
+      "description": "50+ tutoriels React, Next.js, TypeScript et astuces de développement web. Articles détaillés avec exemples de code pratiques.",
       "images": ["/images/blog-og.jpg"],
       "url": "https://site-web-viry-brandon.vercel.app/blog",
-      "type": "website"
+      "type": "website",
+      "locale": "fr_FR"
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Blog",
-      "description": "Lisez mes derniers articles et actualités",
+      "title": "Blog Expert - 50+ Tutoriels React & Next.js | VIRY Brandon",
+      "description": "50+ tutoriels React, Next.js et TypeScript avec exemples pratiques complets",
       "images": ["/images/blog-og.jpg"]
     }
   },
   "publications": {
-    "title": "Mes Publications",
-    "description": "Découvrez mes dernières publications ",
+    "title": "Publications Tech - 100+ Articles LinkedIn, Instagram & Medium | VIRY Brandon",
+    "description": "Retrouvez 100+ publications de VIRY Brandon : articles experts LinkedIn, posts innovants Instagram, contenus Medium et Dev.to sur le développement web, React et les technologies modernes.",
+    "keywords": "publications développeur, articles LinkedIn, posts tech Instagram, contenu Medium, VIRY Brandon publications",
     "openGraph": {
-      "title": "Mes Publications",
-      "description": "Découvrez mes dernières publications ",
+      "title": "Publications Tech - 100+ Articles Experts LinkedIn & Medium",
+      "description": "100+ articles et contenus experts sur le développement web : LinkedIn, Instagram, Medium, Dev.to. Actualités tech innovantes et conseils pratiques.",
       "images": ["/images/publications-og.jpg"],
       "url": "https://site-web-viry-brandon.vercel.app/publications",
-      "type": "website"
+      "type": "website",
+      "locale": "fr_FR"
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Mes Publications",
-      "description": "Découvrez mes dernières publications ",
+      "title": "Publications Tech - 100+ Articles | VIRY Brandon",
+      "description": "100+ articles experts sur LinkedIn, Instagram et Medium sur le développement web",
       "images": ["/images/publications-og.jpg"]
     }
   }

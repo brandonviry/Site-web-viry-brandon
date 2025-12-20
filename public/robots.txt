@@ -1,0 +1,29 @@
+# Robots.txt pour Site Web VIRY Brandon
+# https://site-web-viry-brandon.vercel.app
+
+User-agent: *
+Allow: /
+
+# Bloquer les fichiers admin et API
+Disallow: /api/
+Disallow: /admin/
+
+# Bloquer les fichiers de configuration
+Disallow: /_next/
+Disallow: /.*
+
+# Sitemap
+Sitemap: https://site-web-viry-brandon.vercel.app/sitemap.xml
+
+# Temps d'attente entre les requêtes (en secondes)
+Crawl-delay: 1
+
+# Bots spécifiques
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
