@@ -3,6 +3,7 @@
     "title": "VIRY Brandon - Développeur Web Full Stack | Portfolio & Blog Tech",
     "description": "VIRY Brandon, développeur web full stack spécialisé en React, Next.js et TypeScript. Découvrez mon portfolio de projets, articles de blog et publications tech.",
     "keywords": "développeur web, full stack, React, Next.js, TypeScript, portfolio développeur, blog tech, VIRY Brandon",
+    "robots": { "index": false, "follow": false },
     "openGraph": {
       "title": "VIRY Brandon - Développeur Web Full Stack | Portfolio & Blog",
       "description": "Développeur web passionné spécialisé en React, Next.js et TypeScript. Portfolio, blog et publications.",
